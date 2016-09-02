@@ -119,6 +119,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     
     @IBAction func musicButtonPressed(_ sender: UIButton) {
+        
+        //This will control the playing and puasing of the music
+        if musicPlayer.isPlaying {
+            
+            musicPlayer.pause()
+            sender.alpha = 0.2 //will make the button transparent when paused
+            
+        } else {
+            
+            musicPlayer.play()
+            sender.alpha = 1.0 //will make the button solid when playing...
+            
+        }
+        
     }
     
   
