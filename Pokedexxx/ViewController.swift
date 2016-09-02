@@ -13,6 +13,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var collection: UICollectionView!
     
+    var pokemon = [Pokemon]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collection.dataSource = self
         collection.delegate = self
         
+        parsePokemonCSV()
+        
+    }
+    
+    func parsePokemonCSV() {
+        let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")!
+        
+        do {
+            let csv = try CSV(contentsOfURL: path)
+            let rows = csv.rows
+            print(rows)
+            
+        } catch let err as NSError {
+            
+            print(err.debugDescription)
+        }
     }
 
    //This will deque the cell
