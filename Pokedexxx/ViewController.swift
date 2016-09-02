@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewFlowLayout, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
 
     
     @IBOutlet weak var collection: UICollectionView!
@@ -16,14 +16,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collection.dataSource = self
+        collection.delegate = self
+        
     }
 
-    
+   //This will deque the cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
+            let pokemon = Pokemon(name: "Pokemon", pokedexID: indexPath.row)
+            cell.configureCell(pokemon: pokemon)
+            
             return cell
+            
         } else {
             return UICollectionViewCell()
         }
@@ -31,10 +39,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        
     }
     
-    
+   //This sets the number of items in the section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 30
     }
@@ -44,7 +52,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return 1
     }
     
-    
+    //This will define the size of the cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: 105, height: 105)

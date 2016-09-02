@@ -15,11 +15,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-CY-kJs">
                                 <color key="backgroundColor" red="0.077433906495571136" green="0.45250588655471802" blue="0.96689194440841675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="93m-ro-zHa"/>
+                                </constraints>
                             </view>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-wB-JVn">
                                 <constraints>
@@ -50,7 +53,7 @@
                                                         <constraint firstAttribute="height" constant="80" id="PsS-rh-Yib"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-CO-b6i">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmander" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-CO-b6i">
                                                     <color key="backgroundColor" red="0.0" green="0.46666666666666667" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="105" id="DBb-aZ-pqe"/>
@@ -85,22 +88,24 @@
                             <constraint firstItem="FqS-wB-JVn" firstAttribute="top" secondItem="3Hz-CY-kJs" secondAttribute="bottom" id="7xJ-V4-OYM"/>
                             <constraint firstItem="2eX-Ps-leY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Df6-aE-JdK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2eX-Ps-leY" secondAttribute="bottom" id="FrH-OE-SD1"/>
-                            <constraint firstItem="3Hz-CY-kJs" firstAttribute="trailing" secondItem="FqS-wB-JVn" secondAttribute="trailing" id="NZo-6J-Iqz"/>
+                            <constraint firstItem="3Hz-CY-kJs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MnS-ZZ-dnt"/>
+                            <constraint firstItem="3Hz-CY-kJs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O87-DR-eKq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pKL-ns-VL8" secondAttribute="bottom" constant="20" id="Onu-n9-tUS"/>
                             <constraint firstItem="FqS-wB-JVn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oxu-ld-GUe"/>
                             <constraint firstAttribute="trailing" secondItem="FqS-wB-JVn" secondAttribute="trailing" id="Yjy-0x-Jeu"/>
-                            <constraint firstAttribute="bottom" secondItem="3Hz-CY-kJs" secondAttribute="bottom" constant="504" id="cG3-6r-nUm"/>
                             <constraint firstItem="pKL-ns-VL8" firstAttribute="top" secondItem="FqS-wB-JVn" secondAttribute="bottom" constant="20" id="dF5-zE-BwA"/>
                             <constraint firstAttribute="trailing" secondItem="pKL-ns-VL8" secondAttribute="trailing" constant="20" id="dl6-Vh-7Le"/>
-                            <constraint firstItem="3Hz-CY-kJs" firstAttribute="leading" secondItem="FqS-wB-JVn" secondAttribute="leading" id="h5O-Rt-cfd"/>
+                            <constraint firstAttribute="trailing" secondItem="3Hz-CY-kJs" secondAttribute="trailing" id="erf-kS-g8I"/>
                             <constraint firstItem="pKL-ns-VL8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="nLa-Hm-hid"/>
-                            <constraint firstItem="3Hz-CY-kJs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tun-eY-a6O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="pKL-ns-VL8" id="R9w-38-pci"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.875" y="138.38028169014083"/>
+            <point key="canvasLocation" x="-208" y="133"/>
         </scene>
     </scenes>
     <resources>
