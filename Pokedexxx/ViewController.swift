@@ -26,12 +26,29 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func parsePokemonCSV() {
+        
+        //created a path to the pokemon.csv file
         let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")!
         
         do {
+            
+    //Used the parser to pull out the rows
             let csv = try CSV(contentsOfURL: path)
             let rows = csv.rows
             print(rows)
+            
+ //Loop through each row and pull out the data for the name and PokemonID 
+            for row in rows {
+                
+                let pokeID = Int(row["id"]!)! //force unwrap
+                let name = row["identifier"]!
+                
+//Make an initializer for the for loop above
+                let poke = Pokemon(name: name, pokedexID: pokeID)
+                
+    //attaching the poke(name and ID) the Pokemon array above
+                pokemon.append(poke)
+            }
             
         } catch let err as NSError {
             
@@ -44,8 +61,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
-            let pokemon = Pokemon(name: "Pokemon", pokedexID: indexPath.row)
-            cell.configureCell(pokemon: pokemon)
+            let poke = pokemon[indexPath.row]
+            cell.configureCell(pokemon: poke)
             
             return cell
             
@@ -61,7 +78,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
    //This sets the number of items in the section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return pokemon.count
     }
     
     
