@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
 
     
     @IBOutlet weak var collection: UICollectionView!
     
-    //Pokemon array
-    var pokemon = [Pokemon]()
+    var pokemon = [Pokemon]() //Pokemon array
+    var musicPlayer: AVAudioPlayer!  //music player variable
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collection.delegate = self
         
         parsePokemonCSV()
+        
+    }
+    
+//The function that will prepare my audio
+    func initAudio() {
+        
+        //create a path to the music file that I added
+        let path = Bundle.main.path(forResource: "music", ofType: "mp3")!
         
     }
     
@@ -95,6 +105,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     
+    @IBAction func musicButtonPressed(_ sender: UIButton) {
+    }
     
   
     
