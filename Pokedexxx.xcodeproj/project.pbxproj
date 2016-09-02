@@ -64,10 +64,11 @@
 		035A5ED51D7900AA0007DE74 /* Pokedexxx */ = {
 			isa = PBXGroup;
 			children = (
-				03726CAE1D7A36A600FE7829 /* Resources */,
 				03726CA51D79065600FE7829 /* Model */,
 				03726CA41D79064B00FE7829 /* View */,
 				03726CA31D79064800FE7829 /* Controller */,
+				03726CAF1D7A370200FE7829 /* Utilities */,
+				03726CAE1D7A36A600FE7829 /* Resources */,
 				035A5ED61D7900AA0007DE74 /* AppDelegate.swift */,
 				035A5EDA1D7900AA0007DE74 /* Main.storyboard */,
 				035A5EDD1D7900AA0007DE74 /* Assets.xcassets */,
@@ -105,10 +106,17 @@
 			isa = PBXGroup;
 			children = (
 				03726CA11D79044F00FE7829 /* pokemon.csv */,
-				03726CAA1D79248700FE7829 /* csv.swift */,
 				03726CAC1D7A364800FE7829 /* PokemonFont.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		03726CAF1D7A370200FE7829 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				03726CAA1D79248700FE7829 /* csv.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
