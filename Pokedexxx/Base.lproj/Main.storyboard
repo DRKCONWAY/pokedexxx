@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-CY-kJs">
-                                <color key="backgroundColor" red="0.13772502541542053" green="0.64361876249313354" blue="0.949940025806427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.077433906495571136" green="0.45250588655471802" blue="0.96689194440841675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-wB-JVn">
                                 <constraints>
@@ -43,7 +43,33 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ef3-xl-TyQ">
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="PsS-rh-Yib"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-CO-b6i">
+                                                    <color key="backgroundColor" red="0.0" green="0.46666666666666667" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="105" id="DBb-aZ-pqe"/>
+                                                        <constraint firstAttribute="height" constant="24" id="Hyh-il-fPJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="0.99617952108383179" green="1" blue="0.9999193549156189" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="Sfj-CO-b6i" firstAttribute="leading" secondItem="97e-XI-kTo" secondAttribute="leading" id="2fW-oZ-Ugz"/>
+                                            <constraint firstItem="Sfj-CO-b6i" firstAttribute="top" secondItem="Ef3-xl-TyQ" secondAttribute="bottom" id="5yl-XR-2fU"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ef3-xl-TyQ" secondAttribute="trailing" id="N9h-WW-Wg7"/>
+                                            <constraint firstItem="Ef3-xl-TyQ" firstAttribute="top" secondItem="97e-XI-kTo" secondAttribute="top" id="Z7z-gb-jYY"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sfj-CO-b6i" secondAttribute="trailing" id="a95-UN-610"/>
+                                            <constraint firstItem="Ef3-xl-TyQ" firstAttribute="leading" secondItem="97e-XI-kTo" secondAttribute="leading" id="ovu-4X-WbY"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -74,6 +100,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="4" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
     </resources>
 </document>
