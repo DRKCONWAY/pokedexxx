@@ -13,6 +13,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var collection: UICollectionView!
     
+    //Pokemon array
     var pokemon = [Pokemon]()
     
     override func viewDidLoad() {
@@ -78,6 +79,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
    //This sets the number of items in the section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //This will return as many Pokemon as are in the array above (
         return pokemon.count
     }
     
