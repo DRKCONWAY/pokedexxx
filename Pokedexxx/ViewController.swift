@@ -10,27 +10,31 @@ import UIKit
 import AVFoundation
 
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UISearchBarDelegate {
 
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collection: UICollectionView!
     
-    var pokemon = [Pokemon]() //Pokemon array
     var musicPlayer: AVAudioPlayer!  //music player variable
-
+    var pokemon = [Pokemon]() //Pokemon array
+    var filteredPokemon = [Pokemon]()
+    var inSearchMode = false //set it to be false by default
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collection.dataSource = self
         collection.delegate = self
+        searchBar.delegate = self
         
         parsePokemonCSV()
         initAudio()
         
     }
     
-//The function that will prepare my audio
+    //The function that will prepare my audio
     func initAudio() {
         
         //create a path to the music file that I added
@@ -86,7 +90,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
-            let poke = pokemon[indexPath.row]
+            let poke: Pokemon!
+            
+            if inSearchMode {
+                
+                poke = filteredPokemon[indexPath.row]
+                cell.configureCell(pokemon: poke)
+                
+            } else {
+                
+                poke = pokemon[indexPath.row]
+                cell.configureCell(pokemon: poke)
+            }
+            
             cell.configureCell(pokemon: poke)
             
             return cell
@@ -103,6 +119,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
    //This sets the number of items in the section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if inSearchMode {
+            
+            return filteredPokemon.count
+            
+        }
+        
         //This will return as many Pokemon as are in the array above (
         return pokemon.count
     }
@@ -135,8 +158,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         
     }
-    
-  
+ //Every keystroke in the search bar will filter through the Pokemon
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchBar.text == nil || searchBar.text == "" {
+            
+           inSearchMode = false
+           collection.reloadData() //Reverts back to original if nothing is there or if there's no search
+            
+        } else {
+            
+            inSearchMode = true
+      
+            let lower = searchBar.text!.lowercased()
+            
+            filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil})
+            collection.reloadData() //This will repopulate the collection view with the new data
+        }
+        
+    }
     
     
     
