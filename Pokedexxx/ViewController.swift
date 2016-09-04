@@ -158,13 +158,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         
     }
- //Every keystroke in the search bar will filter through the Pokemon
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        view.endEditing(true) //Dismisses the keyboard when done
+    }
+    
+  //Every keystroke in the search bar will filter through the Pokemon
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if searchBar.text == nil || searchBar.text == "" {
             
            inSearchMode = false
-           collection.reloadData() //Reverts back to original if nothing is there or if there's no search
+    
+  //Reverts back to original if nothing is there or if there's no search
+           collection.reloadData()
+            view.endEditing(true) //Dismisses the keyboard when done
             
         } else {
             
