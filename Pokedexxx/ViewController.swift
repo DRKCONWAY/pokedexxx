@@ -29,6 +29,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collection.delegate = self
         searchBar.delegate = self
         
+        searchBar.returnKeyType = UIReturnKeyType.done
+        
         parsePokemonCSV()
         initAudio()
         
