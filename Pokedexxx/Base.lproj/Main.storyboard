@@ -21,7 +21,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-CY-kJs">
@@ -149,7 +149,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7AI-xb-K1n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WeA-BQ-ZIT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="DKu-4Q-pZD">
@@ -385,6 +385,7 @@
                         <outlet property="evoLabel" destination="Sjs-Gx-QJx" id="rfh-Ve-etn"/>
                         <outlet property="heightLabel" destination="Ucc-Rp-PSg" id="cCd-G3-oug"/>
                         <outlet property="mainImage" destination="rrK-g6-ny3" id="YCP-Gb-BCK"/>
+                        <outlet property="nameLabel" destination="bZX-hw-Ckd" id="Suw-dy-gvS"/>
                         <outlet property="nextEvoImage" destination="o7H-PV-4CJ" id="LKh-6x-4vX"/>
                         <outlet property="pokedexIdLabel" destination="ZcA-tS-8s6" id="mQZ-10-peB"/>
                         <outlet property="typeLabel" destination="sdy-YU-GdE" id="M6o-Vc-dmG"/>
