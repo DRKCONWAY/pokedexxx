@@ -107,33 +107,33 @@ class Pokemon {
             
             if let dict = response.result.value as? Dictionary<String, AnyObject> {
             
-             if let weight = dict["weight"] as? String {
+             if let weight = dict["weight"] as? Int? {
             
-                self._weight = weight
+                self._weight = "\(weight)"
             }
                 
-                if let height = dict["height"] as? String {
+                if let height = dict["height"] as? Int? {
                     
-                    self._height = height
+                    self._height = "\(height)"
                 }
                 
-                if let attack = dict["attack"] as? Int {
+                if let attack = dict["attack"] as? String? {
                     
-                    self._attack = "\(attack)"
+                    self._attack = attack
                 }
                 
-                if let defense = dict["defense"] as? String {
+                if let defense = dict["defense"] as? Int? {
                     
-                    self._defense = defense
+                    self._defense = "\(defense)"
                 }
                 
-                print(self._attack)
+                print(self._weight)
                 print(self._weight)
                 print(self._defense)
                 print(self._height)
                 
             }
-            
+           completed()
         }
 
     }
