@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-208.125" y="132.04225352112675"/>
+            <point key="canvasLocation" x="-319" y="129"/>
         </scene>
         <!--Pokemon DetailVC-->
         <scene sceneID="ff1-TX-5Oq">
@@ -203,7 +203,7 @@
                                                 <color key="textColor" red="0.074509803921568626" green="0.34901960784313724" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ucc-Rp-PSg">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ucc-Rp-PSg">
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -217,7 +217,7 @@
                                                 <color key="textColor" red="0.074509803920000006" green="0.34901960780000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="r5W-3b-w9a">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="r5W-3b-w9a">
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -285,7 +285,7 @@
                                                 <color key="textColor" red="0.074509803920000006" green="0.34901960780000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="uPi-bW-14u">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="uPi-bW-14u">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="18" id="hpD-HF-pEK"/>
                                                 </constraints>
@@ -302,7 +302,7 @@
                                                 <color key="textColor" red="0.074509803920000006" green="0.34901960780000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZcA-tS-8s6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZcA-tS-8s6">
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -319,7 +319,7 @@
                                                 <color key="textColor" red="0.074509803920000006" green="0.34901960780000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mAq-eW-Yt4">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mAq-eW-Yt4">
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -378,7 +378,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="baseAttackLabel" destination="mAq-eW-Yt4" id="8PV-w5-Xoa"/>
+                        <outlet property="attackLabel" destination="mAq-eW-Yt4" id="fYg-2U-mzT"/>
                         <outlet property="currentEvoImage" destination="xC9-nA-beE" id="8Fd-Lj-KUb"/>
                         <outlet property="defenseLabel" destination="uPi-bW-14u" id="n87-kj-YFR"/>
                         <outlet property="descriptionLabel" destination="pXm-8B-K0k" id="GjT-Sv-r3O"/>
@@ -388,7 +388,7 @@
                         <outlet property="nameLabel" destination="bZX-hw-Ckd" id="Suw-dy-gvS"/>
                         <outlet property="nextEvoImage" destination="o7H-PV-4CJ" id="LKh-6x-4vX"/>
                         <outlet property="pokedexIdLabel" destination="ZcA-tS-8s6" id="mQZ-10-peB"/>
-                        <outlet property="typeLabel" destination="sdy-YU-GdE" id="M6o-Vc-dmG"/>
+                        <outlet property="typeLabel" destination="zQl-jJ-qie" id="xVs-60-0aw"/>
                         <outlet property="weightLabel" destination="r5W-3b-w9a" id="Q99-Yd-HRi"/>
                     </connections>
                 </viewController>
