@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 
+
 class Pokemon {
     
     private var _name: String!
