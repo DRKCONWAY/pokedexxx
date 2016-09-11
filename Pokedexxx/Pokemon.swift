@@ -135,6 +135,51 @@ class Pokemon {
                 print(self._defense)
                 print(self._height)
                 
+                if let types = dict["types"] as? [Dictionary<String, String>] , types.count > 0 {
+                    
+                    if let name = types[0]["name"] {
+                        self._type = name.capitalized
+                    }
+                    
+                    if types.count > 1 {
+                        for x in 1..<types.count {
+                            if let name = types[x]["name"] {
+                                self._type! += "/\(name.capitalized)"
+                            }
+                        }
+                    }
+                    print(self._type)
+                    
+                } else {
+                    
+                    self._type = ""
+                }
+                
+                if let descriptionArray = dict["descriptions"] as? [Dictionary<String, String>] , descriptionArray.count > 0 {
+                    
+                    if let url = descriptionArray[0]["resource_uri"] {
+                        
+                        let descriptionURL = "\(URL_BASE)\(url)"
+                        
+                        Alamofire.request(descriptionURL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+                            
+                            if let descriptionDictionary = response.result.value as? Dictionary<String, AnyObject> {
+                                
+                                if let description = descriptionDictionary["description"] as? String {
+                                    
+                                    let newDescription = description.replacingOccurrences(of: "POKMON", with: "Pokemon")
+                                    
+                                    print(newDescription)
+                                    
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                }
+                
             }
            completed()
         }

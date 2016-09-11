@@ -30,7 +30,7 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = pokemon.name
+        nameLabel.text = pokemon.name.capitalized
         
         let img = UIImage(named: "\(pokemon.pokedexID)")
         
@@ -52,6 +52,7 @@ class PokemonDetailVC: UIViewController {
         defenseLabel.text = pokemon.defense
         weightLabel.text = pokemon.weight
         heightLabel.text = pokemon.height
+        typeLabel.text = pokemon.type
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
