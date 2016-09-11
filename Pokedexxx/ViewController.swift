@@ -97,15 +97,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             if inSearchMode {
                 
                 poke = filteredPokemon[indexPath.row]
-                cell.configureCell(pokemon: poke)
+                cell.configureCell(poke)
                 
             } else {
                 
                 poke = pokemon[indexPath.row]
-                cell.configureCell(pokemon: poke)
+                cell.configureCell(poke)
             }
             
-            cell.configureCell(pokemon: poke)
+            cell.configureCell(poke)
             
             return cell
             

@@ -42,10 +42,10 @@ class PokemonDetailVC: UIViewController {
     }
     
     func updateUI() {
-        attackLabel.text = pokemon.attack
-        defenseLabel.text = pokemon.defense
-        weightLabel.text = pokemon.weight
-        heightLabel.text = pokemon.height
+       // attackLabel.text = pokemon.attack
+       // defenseLabel.text = pokemon.defense
+       // weightLabel.text = pokemon.weight
+        //heightLabel.text = pokemon.height
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
