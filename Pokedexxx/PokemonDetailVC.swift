@@ -32,20 +32,26 @@ class PokemonDetailVC: UIViewController {
         
         nameLabel.text = pokemon.name
         
+        let img = UIImage(named: "\(pokemon.pokedexID)")
+        
+        mainImage.image = img
+        
+        currentEvoImage.image = img
+        
+        pokedexIdLabel.text = "\(pokemon.pokedexID)"
+        
         pokemon.downloadPokemonDetails {
        // Whatever we write will only be called when the network call is done!
-            
-            print("did I arrive here?")
             
         self.updateUI()
         }
     }
     
     func updateUI() {
-       // attackLabel.text = pokemon.attack
-       // defenseLabel.text = pokemon.defense
-       // weightLabel.text = pokemon.weight
-        //heightLabel.text = pokemon.height
+        attackLabel.text = pokemon.attack
+        defenseLabel.text = pokemon.defense
+        weightLabel.text = pokemon.weight
+        heightLabel.text = pokemon.height
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
